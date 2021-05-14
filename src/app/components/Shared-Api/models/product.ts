@@ -14,5 +14,5 @@ export class Product {
 
 export class Category {
     _id : string;
-    categoryname : string;
+    categoryname : string; 
 }

@@ -4,7 +4,7 @@ export class Cart {
     product : Product;
     quantity : 1;
 }
-export class ListCart {
+export class ListCart { 
     _id : string;
     user : string;
     product : any;

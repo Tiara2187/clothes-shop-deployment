@@ -12,7 +12,7 @@ export class User {
 }
 
 export class ForgetPass {
-    username: string;
+    username: string; 
     password: string;
     email: string;
 }
