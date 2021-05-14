@@ -12,14 +12,14 @@
           </div>
 
           <div class="product-details__btn">
-            <a class="add" href="#">
+            <a class="add" (click)="addCart(this.data._id)">
               <span>
                 <svg>
                   <use xlink:href="../../../../../../assets/sprite.svg#icon-cart-plus"></use>
                 </svg>
               </span>
               ADD TO CART</a>
-            <a class="buy" href="#">
+            <a class="buy" (click)="addCart(this.data._id)" [routerLink]="['../../../user/cart']">
               <span>
                 <svg>
                   <use xlink:href="../../../../../../assets/sprite.svg#icon-credit-card"></use>
