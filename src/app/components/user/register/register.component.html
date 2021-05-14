@@ -1,0 +1,82 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<body>
+    <div class="container">
+      <div class="row px-3">
+        <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+          <div class="img-left d-none d-md-flex"></div>
+  
+          <div class="card-body">
+            <h2 class="title text-center mt-4">
+              Register into account
+            </h2>
+            <form [formGroup]="signupForm" (ngSubmit)="signUp()" class="form-box px-3 was-validated">
+              <div class="form-input">
+                <span><i class="fa fa-user"></i></span>
+                <input 
+                type="text" 
+                id="username"
+                name="username" 
+                placeholder="Username" 
+                required
+                formControlName="username"
+                />
+                <small class="invalid-feedback" *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">Please fill a valid Username.</small>
+              </div>
+
+              <div class="form-input">
+                <span><i class="fa fa-envelope-o"></i></span>
+                <input 
+                type="email"
+                id="email" 
+                name="email" 
+                placeholder="Email Address" 
+                tabindex="10" 
+                required
+                formControlName="email"
+                />
+                <small class="invalid-feedback" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Please fill a valid Email.</small>
+              </div>
+
+              <div class="form-input">
+                <span><i class="fa fa-envelope-o"></i></span>
+                <input 
+                type="text"
+                id="phone" 
+                name="phone" 
+                placeholder="phone" 
+                maxlength="20"
+                required
+                formControlName="phone"
+                />
+                <small class="invalid-feedback" *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched">Please fill a valid Phone.</small>
+              </div>
+
+              <div class="form-input">
+                <span><i class="fa fa-key"></i></span>
+                <input 
+                type="password" 
+                id="password"
+                name="password" 
+                placeholder="Password" 
+                required
+                minlength="6"
+                maxlength="20"
+                formControlName="password"
+                />
+                <small class="invalid-feedback" *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">Must be 6-20 characters long.</small>
+              </div>
+  
+              <div class="mb-3"></div>
+  
+              <div class="mb-3">
+                <button type="submit" class="btn btn-block text-uppercase">
+                  SignUp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

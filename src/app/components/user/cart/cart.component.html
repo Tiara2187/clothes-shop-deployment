@@ -1,0 +1,92 @@
+<section class="mt-5" *ngIf="product$ | async as product">
+<div class="section cart__area">
+    <div class="container">
+        <div class="responsive__cart-area">
+            <form class="cart__form">
+                <div class="cart__table table-responsive">
+                    <table width="100%" class="table">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>NAME</th>
+                                <th>UNIT PRICE</th>
+                                <th>QUANTITY</th>
+                                <th>SUBTOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of product; ">
+                                <td class="product__thumbnail">
+                                    <a href="#">
+                                        <img src="{{item.product.productimage}}" >
+                                    </a>
+                                </td>
+                                <td class="product__name">
+                                    <a href="#">{{item.product.productname}}</a>
+                                    <br><br>
+                                    <small>{{item.product.color}}</small>
+                                </td>
+                                <td class="product__price">
+                                    <div class="price">
+                                        <span class="new__price">{{item.product.productprice}}</span>
+                                    </div>
+                                </td>
+                                <td class="product__quantity">
+                                    <div class="input-counter">
+                                        <div>
+                                            <span class="minus-btn">
+                                                <svg>
+                                                    <a (click)="deleteQuantityCart(item.product._id)"><use xlink:href="../../../../assets/sprite.svg#icon-minus"></use></a>
+                                                </svg>
+                                            </span>
+                                            <input type="text"  value="{{item.quantity}}" class="counter-btn" readonly>
+                                            <span class="plus-btn">
+                                                <svg>
+                                                    <a (click)="addQuantityCart(item.product._id)"><use xlink:href="../../../../assets/sprite.svg#icon-plus"></use></a>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="product__subtotal">
+                                    <div class="price">
+                                        <span class="new__price">{{item.product.productprice * item.quantity}}</span>
+                                    </div>
+                                    <a (click)="deleteCart(item._id)" class="remove__cart-item">
+                                        <svg>
+                                            <a (click)="deleteCart(item._id)"><use xlink:href="../../../../assets/sprite.svg#icon-trash" ></use></a>
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-btns">
+                    <div class="continue__shopping">
+                        <a [routerLink]="['../../product/product-item']">Continue Shopping</a>
+                    </div>
+                </div>
+
+                <div class="cart__totals">
+                    <h3>Cart Totals</h3>
+                    <ul>
+                        <li>
+                            Total Quantity
+                            <span class="new__price">{{this.totalquantity}}</span>
+                        </li>
+                  
+                        <li>
+                            TotalPrice
+                            <span class="new__price">{{this.totalprice}}</span>
+                        </li>
+                    </ul>
+                    <button class="btn buy" (click)="checkout(product)" >Checkout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>

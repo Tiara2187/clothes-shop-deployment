@@ -1,0 +1,32 @@
+<div class="title">
+    <h1>Product On Shop</h1>
+  </div>
+  <section class="row pb-5 mb-4" *ngIf="product$ | async as product">
+    <div class="container">
+		<div class="row">
+			<div *ngFor="let item of product | slice: firstIndex : lastIndex; " class="col-md-4 product-grid">
+				<div class="image">
+					<a href="#">
+						<img src="{{item.productimage}}" alt="{{item.productname}}" class="w-100">
+						<div class="overlay">
+							<div class="detail">
+                                <a [routerLink]="['/product/product-detail/' + item._id]"> View Details</a>
+                            </div>
+						</div>
+					</a>
+				</div>
+				<h5 class="text-center">{{item.productname}}</h5>
+                <h5 class="text-center">{{item.preview}}</h5>
+				<h5 class="text-center">{{item.productprice}}</h5>
+				<a href="#" class="btn buy">BUY</a>
+			</div>
+		</div>
+	</div>
+    <nav class="ml-3 col-md-12 ">
+        <ul class="pagination justify-content-center">
+          <li *ngFor="let i of arrProduct(product.length); let in = index;" class="page-item">
+              <a class="page-link btn " (click)="paginationIndex(in)" >{{in + 1}}</a>
+            </li>
+        </ul>
+      </nav>
+  </section>

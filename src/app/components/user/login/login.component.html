@@ -1,0 +1,66 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<body>
+    <div class="container">
+      <div class="row px-3">
+        <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+          <div class="img-left d-none d-md-flex"></div>
+  
+          <div class="card-body">
+            <h2 class="title text-center mt-4">
+              Login into account
+            </h2>
+            <form [formGroup]="signinForm" (ngSubmit)="loginUser()" class="form-box px-3 was-validated">
+              <div class="form-input">
+                <span><i class="fa fa-envelope-o"></i></span>
+                <input 
+                type="email" 
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Email Address" 
+                tabindex="10" 
+                required
+                formControlName="email"/>
+                <small class="invalid-feedback" *ngIf="!signinForm.get('email').valid && signinForm.get('email').touched">Please fill a valid Email.</small>
+
+              </div>
+              <div class="form-input">
+                <span><i class="fa fa-key"></i></span>
+                <input 
+                type="password" 
+                id="password"
+                class="form-control"
+                placeholder="Password" 
+                required
+                minlength="6"
+                maxlength="20"
+                formControlName="password"/>
+                <small class="invalid-feedback" *ngIf="!signinForm.get('password').valid && signinForm.get('password').touched">Must be 6-20 characters long.</small>
+              </div> 
+  
+              <div class="mb-3">
+                <button type="submit" class="btn btn-block text-uppercase">
+                  Login
+                </button>
+              </div>
+  
+              <div class="text-right">
+                <a [routerLink]="['../forget-pass']" class="forget-link">
+                  Forget Password?
+                </a>
+              </div>
+              
+              <hr class="my-4">
+  
+              <div class="text-center mb-2">
+                Don't have an account?
+                <a [routerLink]="['../register']" class="register-link">
+                  Register here
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

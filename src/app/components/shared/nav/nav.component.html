@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="../../../../assets/favicon.ico" type="image/x-icon" />
+>
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__hamburger">
+            <svg>
+              <use xlink:href="../../../../assets/sprite.svg#icon-menu"></use>
+            </svg>
+          </div>
+  
+          <app-header></app-header>
+  
+          <div class="nav__menu">
+            <div class="menu__top">
+              <span class="nav__category">Clothes Shop</span>
+              <a routerLink="home" class="close__toggle">
+                <svg>
+                  <use xlink:href="../../../../assets/sprite.svg#icon-cross"></use>
+                </svg>
+              </a>
+            </div>
+
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a [routerLink]="['home']" class="nav__link scroll-link" active>Home</a>
+              </li>
+              <li class="nav__item">
+                <a [routerLink]="['product/product-item']" class="nav__link scroll-link">Product</a>
+              </li>
+
+              <li class="navbar text-center">
+                <a class="btn buttonStyle dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Category
+                </a>
+                <div class="dropdown-menu btn" aria-labelledby="navbarDropdown"(click)="reload()">
+                <a  *ngFor="let category of category$ | async"  class="dropdown-item" [routerLink]="['category/' + category._id]">{{category.categoryname}}</a>
+                </div>
+              </li>
+
+              <li class="nav__item">
+                <a *ngIf="!this.userService.isLogin" [routerLink]="['user/login']" class="nav__link scroll-link" >Login</a>
+              </li>
+
+              <li class="nav__item">
+                <a *ngIf="!this.userService.isLogin" [routerLink]="['user/register']" class="nav__link scroll-link">SignUp</a>
+              </li>
+             
+            </ul>
+          </div>
+          
+          <div class="nav__icons">
+            <a *ngIf="this.userService.isLogin"(click)="logout()" class="icon__item">
+              <svg class="icon__user">
+                <use xlink:href="../../../../assets/sprite.svg#i-signout"></use>
+              </svg>
+            </a>
+
+            <a *ngIf="this.userService.isLogin" [routerLink]="['user/profile-detail']" class="icon__item">
+              <svg class="icon__user">
+                <use xlink:href="../../../../assets/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+
+            <a *ngIf="this.userService.isLogin" [routerLink]="['user/order-list']" class="icon__item">
+              <svg class="icon__search">
+                <use xlink:href="../../../../assets/sprite.svg#i-inbox"></use>
+              </svg>
+            </a>
+
+            <a *ngIf="this.userService.isLogin" [routerLink]="['user/cart']" class="icon__item">
+              <svg class="icon__cart">
+                <use xlink:href="../../../../assets/sprite.svg#i-cart"></use>
+              </svg>
+              <span id="cart__total">{{totalCart}}</span>
+            </a>
+
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
