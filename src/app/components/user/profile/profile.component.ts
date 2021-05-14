@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
-import { UpdateUser } from '../../Shared-Api/models/User';
+const UpdateUser = require('../../Shared-Api/models/User');
 import { UserService } from '../../Shared-Api/service/user.service';
 
 @Component({
