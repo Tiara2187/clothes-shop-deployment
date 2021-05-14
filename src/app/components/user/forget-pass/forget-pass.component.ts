@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
-import { ForgetPass } from '../../Shared-Api/models/User';
+import { ForgetPass } from '../../Shared-Api/models/user';
 import { UserService } from '../../Shared-Api/service/user.service';
 
 @Component({

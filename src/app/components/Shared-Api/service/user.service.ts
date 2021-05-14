@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs'
 import { catchError, map } from 'rxjs/operators'
 import { Router } from '@angular/router'
-import { addressUser, ForgetPass, UpdateUser, User } from '../models/User'
+import { addressUser, ForgetPass, UpdateUser, User } from '../models/user'
 import Swal from 'sweetalert2'
 const BACKEND_URL = environment.apiUrl + '/users'
 
