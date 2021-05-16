@@ -12,8 +12,8 @@ body {
     font-size: 1rem;
     line-height: 1.65;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #222 50%, #fff 50%);
-    color: #fff;
+    background: linear-gradient(to right, var(--black) 50%, var(--white) 50%);
+    color: var(--white);
 }
 
 .uc__wrapper {
@@ -44,7 +44,7 @@ body {
 
 .title {
     display: inline-block;
-    font-size: 40px;
+    font-size: 50px;
     position: relative;
     margin-bottom: 2rem;
 }
@@ -55,12 +55,12 @@ body {
     bottom: 0;
     left: 0;
     height: 3px;
-    background-color: #fff;
-    width: 280px;
+    background-color: var(--white);
+    width: 380px;
 }
 
 .intro {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;

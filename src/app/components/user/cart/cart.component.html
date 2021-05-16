@@ -28,7 +28,7 @@
                                 </td>
                                 <td class="product__price">
                                     <div class="price">
-                                        <span class="new__price">{{item.product.productprice}}</span>
+                                        <span class="new__price">Rp.{{item.product.productprice}}</span>
                                     </div>
                                 </td>
                                 <td class="product__quantity">
@@ -50,7 +50,7 @@
                                 </td>
                                 <td class="product__subtotal">
                                     <div class="price">
-                                        <span class="new__price">{{item.product.productprice * item.quantity}}</span>
+                                        <span class="new__price">Rp.{{item.product.productprice * item.quantity}}</span>
                                     </div>
                                     <a (click)="deleteCart(item._id)" class="remove__cart-item">
                                         <svg>
@@ -69,7 +69,6 @@
                         <a [routerLink]="['../../product/product-item']">Continue Shopping</a>
                     </div>
                 </div>
-
                 <div class="cart__totals">
                     <h3>Cart Totals</h3>
                     <ul>
@@ -80,7 +79,7 @@
                   
                         <li>
                             TotalPrice
-                            <span class="new__price">{{this.totalprice}}</span>
+                            <span class="new__price">Rp.{{this.totalprice}}</span>
                         </li>
                     </ul>
                     <button class="btn buy" (click)="checkout(product)" >Checkout</button>

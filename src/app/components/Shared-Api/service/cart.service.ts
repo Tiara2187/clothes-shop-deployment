@@ -19,7 +19,7 @@ export class CartService {
   addCart = (cart : Cart) => {
     return this.http.post<any>(BACKEND_URL + '/addcart', cart).subscribe((res : any) => {
       console.log(res.data);
-      Swal.fire('Success','Add Product Success','success').then(result => {window.location.reload()})
+      Swal.fire({icon: 'success', title: 'Add Product Success'}).then(result => {window.location.reload()})
 
     },
     error => {
@@ -44,7 +44,7 @@ export class CartService {
 
   public addQuantityCart(_id) {
     return this.http.get<any>(`${environment.apiUrl}/users/addonecart/${_id}`).subscribe(res => {
-      Swal.fire('Success','Success add product', 'success').then(res => location.reload ())
+      Swal.fire({icon: 'success', title: 'Success add product'}).then(res => location.reload ())
     })
   }
 

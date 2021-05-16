@@ -18,6 +18,7 @@ export class UserService {
 
   signUp(user : User) {
     return this.http.post(BACKEND_URL +'/signup', user).subscribe((res: any) => {
+      console.log(res);
       
       Swal.fire('Welcome','You can login now','success')
       this.router.navigate(['']);
