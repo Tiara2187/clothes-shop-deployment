@@ -45,7 +45,7 @@ body{
 
 .links ul li:hover,
 .links ul li.active{
-	color: #4abd3e;
+	color:  #252525;
 }
 
 .view_main{
@@ -84,7 +84,7 @@ body{
 
 .view_item .btn{
 	width: 125px;
-	background: #4abd3e;
+	background: #252525;
 	padding: 8px 5px;
 	border-radius: 3px;
 	color: #fff;
@@ -94,7 +94,7 @@ body{
 }
 
 .view_item .btn:hover{
-	background: #3bd62b;
+	background:  #252525;
 }
 
 .grid-view{

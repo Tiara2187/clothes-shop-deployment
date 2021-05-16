@@ -82,7 +82,6 @@ export class UserService {
 
   updateUser(user : UpdateUser) : Observable<any> {
     return this.http.put<any>(BACKEND_URL + '/updateuser', user).pipe(map(result => true))
-
   }
 
   logout() {

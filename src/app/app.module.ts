@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './components/Shared-Api/auth/auth.interceptor.service';
 import { CategoryComponent } from './components/category/category.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 
 
@@ -25,6 +26,7 @@ import { CategoryComponent } from './components/category/category.component';
     FooterComponent,
     NavComponent,
     CategoryComponent,
+    ComingSoonComponent,
     
    
   ],

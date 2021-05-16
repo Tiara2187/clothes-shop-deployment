@@ -16,7 +16,7 @@
     left: 50%;
     bottom: -20%;
     transform: translate(-50%, -50%);
-    background-color: var(--pink);
+    background-color: var(--black);
     width: 50%;
     height: 0.4rem;
     z-index: 1;
@@ -87,9 +87,12 @@
     background-color: #434444;
     color: #fff;
 }
+.page-link btn{
+    background: var(--black);
+}
 
 .headingStyle {
-    background: #0062cc;
+    background: var(--black);
     color: #fff;
     width: 200px;
     font-size: 24px;
@@ -98,7 +101,7 @@
 }
 .headingStyle::after {
     content: '';
-    border-top: 40px solid #0062cc;
+    border-top: 40px solid var(--black);
     border-right: 40px solid transparent;
     position: relative;
     left: 25px;

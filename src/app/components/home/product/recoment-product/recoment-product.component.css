@@ -20,7 +20,7 @@
     left: 50%;
     bottom: -20%;
     transform: translate(-50%, -50%);
-    background-color: var(--pink);
+    background-color: var(--black);
     width: 50%;
     height: 0.4rem;
     z-index: 1;
@@ -112,7 +112,6 @@
     margin-right: 5px;
   }
   .carousel .item-price span {
-    color: #86bd57;
     font-size: 110%;
   }
   .carousel .carousel-control.left i {

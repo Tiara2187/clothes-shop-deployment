@@ -5,7 +5,7 @@
     --black3: #252525;
     --black4: #000;
     --black5: #212529;
-    --orange: #eb0028;
+    --orange: #6d6e6e;
     --white: #fff;
     --grey: #959595;
     --grey2: #666;
@@ -54,11 +54,6 @@
     font-weight: 500;
   }
   
-  /*
-  ======================
-  Header
-  ======================
-  */
   
   .header {
     position: relative;
@@ -70,11 +65,6 @@
     padding: 0 1.6rem;
   }
   
-  /*
-  ======================
-  Navigation
-  ======================
-  */
   
   .navigation {
     position: relative;

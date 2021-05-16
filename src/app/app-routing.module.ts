@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 
 const appRoutes: Routes = [
@@ -20,6 +21,10 @@ const appRoutes: Routes = [
 
   {
     path: 'category/:_id', component: CategoryComponent
+  },
+
+  {
+    path: 'coming-soon', component: ComingSoonComponent
   },
 
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
