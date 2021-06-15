@@ -12,8 +12,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
-
-
 @NgModule({
   declarations: [UserComponent, CartComponent, OrderListComponent, LoginComponent, RegisterComponent, ProfileComponent, ForgetPassComponent, ProfileDetailComponent],
   imports: [
